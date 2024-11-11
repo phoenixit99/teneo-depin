@@ -34,11 +34,11 @@ if [ -d "teneo" ]; then
 fi
 # Create and navigate to t3rn directory
 
- echo "--- Enable ssh via firebase ----"
+#  echo "--- Enable ssh via firebase ----"
 
-ufw allow ssh
-ufw enable
-ufw status
+# ufw allow ssh
+# ufw enable
+# ufw status
 
 git clone https://github.com/phoenixit99/teneo-depin.git
 
