@@ -40,7 +40,7 @@ ufw allow ssh
 ufw enable
 ufw status
 
-git clone https://github.com/phoenixit99/teneo.git
+git clone https://github.com/phoenixit99/teneo-depin.git
 
 cd teneo
 
