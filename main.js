@@ -238,17 +238,9 @@ async function main() {
   let proxy = null;
 
     if (!userId) {
-      rl.question('User ID not found. Would you like to:\n1. Login to your account\nChoose an option: ', async (option) => {
-        switch (option) {
-          case '1':
-             console.log('Please make sure you have account to login and run node.');
-            await getUserId(proxy);
-            break;
-          default:
-            console.log('Invalid option. Exiting...');
-            process.exit(0);
-        }
-      });
+      console.log('Please make sure you have account to login and run node.\n');
+      console.log('Please login to your account to continue.');
+      await getUserId(proxy);
     } else {
       rl.question('You already have account. Please choose an option:\n1. Logout the a\n2. Start Running Node\nChoose an option: ', async (option) => {
         switch (option) {
