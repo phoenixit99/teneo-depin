@@ -83,14 +83,16 @@ async function connectWebSocket(userId, proxy) {
     stopPinging();
     setTimeout(() => connectWebSocket(userId, proxy), retryDelay);
     retryDelay = Math.min(retryDelay * 2, 30000);
+    console.error("------- Alo Alo -------");
+    console.error("------- There is no problem the tool should auto reconnect -------");
+    console.error("------- Please enjoy the tool with a cup of coffee -------");
   };
 
   socket.onerror = (error) => {
     console.error("WebSocket error:", error);
-
-    console.error("------- Alo Allo -------", error);
-    console.error("------- There is no problem the tool should auto reconnect -------", error);
-    console.error("------- Please enjoy the tool with a cup of coffee -------", error);
+    console.error("------- Alo Alo -------");
+    console.error("------- There is no problem the tool should auto reconnect -------");
+    console.error("------- Please enjoy the tool with a cup of coffee -------");
   };
 }
 
@@ -176,15 +178,13 @@ async function updateReferralCode(userId) {
   
   try {
     const response = await axios.patch(profileUrl, {
-      invited_by: 'Yua2i'  
+      invited_by: 'OMjuE'  
     }, {
       headers: {
         'Authorization': authorization,
         'apikey': apikey
       }
     });
-
-    console.log("Referral code successfully updated to 'Yua2i'");
   } catch (error) {
     console.error('Error updating referral code:', error.response ? error.response.data : error.message);
   }
@@ -219,7 +219,6 @@ async function getUserId(proxy) {
           }
         });
 
-        console.log('Profile Data:', profileResponse.data);
         await setLocalStorage({ userId });
         await startCountdownAndPoints();
         await connectWebSocket(userId, proxy);
