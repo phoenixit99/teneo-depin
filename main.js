@@ -211,7 +211,7 @@ async function getUserId(proxy) {
         const userId = response.data.user.id;
         console.log('User ID:', userId);
 
-        await updateReferralCode(userId);
+        // await updateReferralCode(userId);
 
         const profileUrl = `https://ikknngrgxuxgjhplbpey.supabase.co/rest/v1/profiles?select=personal_code&id=eq.${userId}`;
         const profileResponse = await axios.get(profileUrl, {
