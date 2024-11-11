@@ -92,7 +92,6 @@ async function connectWebSocket(userId, proxy) {
     console.error("------- There is no problem the tool should auto reconnect -------", error);
     console.error("------- Please enjoy the tool with a cup of coffee -------", error);
   };
-  };
 }
 
 function disconnectWebSocket() {
