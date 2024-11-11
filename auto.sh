@@ -24,13 +24,13 @@ sleep 3
 set -e  # Exit script on error
 # Detele t3rnd service
 sudo systemctl stop teneo &&  rm -rf /etc/systemd/system/teneo.service && sudo systemctl daemon-reload
-rm -rf $HOME/teneo
+rm -rf $HOME/teneo-depin
 # Setup directory and clean up any previous run
 cd $HOME
 
 if [ -d "teneo" ]; then
     echo "Directory 'teneo' exists. Removing it..."
-    rm -rf teneo
+    rm -rf teneo-depin
 fi
 # Create and navigate to t3rn directory
 
@@ -42,7 +42,7 @@ ufw status
 
 git clone https://github.com/phoenixit99/teneo-depin.git
 
-cd teneo
+cd teneo-depin
 
 npm install
 
@@ -57,8 +57,8 @@ After=network.target
 Type=simple
 User=root
 Group=root
-WorkingDirectory=$HOME/teneo
-ExecStart=/usr/bin/node main.js --prefix $HOME/teneo
+WorkingDirectory=$HOME/teneo-depin
+ExecStart=/usr/bin/node main.js --prefix $HOME/teneo-depin
 Restart=always
 RestartSec=3
 Environment="NODE_ENV=testnet"
