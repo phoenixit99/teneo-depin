@@ -34,7 +34,7 @@ if [ -d "teneo" ]; then
 fi
 # Create and navigate to t3rn directory
 
- echo "--- Enable ufw ----"
+ echo "--- Enable ssh via firebase ----"
 
 ufw allow ssh
 ufw enable
