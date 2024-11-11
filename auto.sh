@@ -23,7 +23,7 @@ echo "                                                                          
 sleep 3
 set -e  # Exit script on error
 # Detele t3rnd service
-sudo systemctl stop teneo &&  rm -rf /etc/systemd/system/teneo.service && sudo systemctl daemon-reload
+# sudo systemctl stop teneo &&  rm -rf /etc/systemd/system/teneo.service && sudo systemctl daemon-reload
 rm -rf $HOME/teneo-depin
 # Setup directory and clean up any previous run
 cd $HOME
