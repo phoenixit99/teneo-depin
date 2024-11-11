@@ -68,10 +68,11 @@ Environment="NODE_ENV=testnet"
 WantedBy=multi-user.target   
 EOF
 
+node main.js
 
-sudo systemctl daemon-reload
-sudo systemctl enable teneo
-sudo systemctl restart teneo
-sudo journalctl -u teneo -f -o cat
+# sudo systemctl daemon-reload
+# sudo systemctl enable teneo
+# sudo systemctl restart teneo
+# sudo journalctl -u teneo -f -o cat
 
-sleep 5
+# sleep 5
