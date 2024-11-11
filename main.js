@@ -43,9 +43,11 @@ async function setLocalStorage(data) {
 
 async function connectWebSocket(userId, proxy) {
   if (socket) return;
+  console.log("WebSocket ping connection");
   const version = "v0.2";
   const url = "wss://secure.ws.teneo.pro";
   const wsUrl = `${url}/websocket?userId=${encodeURIComponent(userId)}&version=${encodeURIComponent(version)}`;
+    console.log("WebSocket disconnected");
 
   const options = {};
   if (proxy) {
